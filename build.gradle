@@ -5,6 +5,7 @@ plugins {
 
 group 'com.jonfast565'
 version '1.0-SNAPSHOT'
+mainClassName = 'main.java.com.jonfast565.sqlextractor.Main'
 
 repositories {
     mavenCentral()
