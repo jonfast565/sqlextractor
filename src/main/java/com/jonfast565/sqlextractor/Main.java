@@ -34,7 +34,10 @@ public class Main {
             var results = driveParser(inputFilePath);
             var resultsPath = path.getParent() + File.separator + path.getFileName().toString().split("\\.")[0] + ".json";
             FileWriter f = new FileWriter(resultsPath);
-            Gson g = new GsonBuilder().create();
+            Gson g = new GsonBuilder()
+                    .setPrettyPrinting()
+                    .serializeNulls()
+                    .create();
             var json = g.toJson(results);
             f.write(json);
             f.close();
